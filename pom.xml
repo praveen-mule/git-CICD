@@ -42,7 +42,7 @@
       <region>us-east-2</region>
       <workers>1</workers>
       <workerType>MICRO</workerType>
-      <businessGroupId>7b26f344-5d00-4866-9297-b2959a86e0d7</businessGroupId>
+      <businessGroupId>3ae8a3c9-3847-4611-a9d4-d863d74a15cd</businessGroupId>
     </cloudHubDeployment>
   </configuration>
 			</plugin>
