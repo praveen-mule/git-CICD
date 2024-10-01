@@ -37,7 +37,7 @@
       <muleVersion>${app.runtime}</muleVersion>
       <username>${env.PLATFORM_USERNAME}</username>
       <password>${env.PLATFORM_PASSWORD}</password>
-      <applicationName>conflowence-ci-cd</applicationName>
+      <applicationName>test-ci-cd</applicationName>
       <environment>Sandbox</environment>
       <region>us-east-2</region>
       <workers>1</workers>
