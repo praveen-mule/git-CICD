@@ -11,25 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 #first, we need to checkout our mule application's code
-
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-
+      - name: Build and deploy artifact to sandbox
 #run the maven deploy lifecycle. The -B indicated a batch process,
 #which reduces the amount of logging the deployment does
-      - name: Set up Mule environment
-        run: |
-        echo "db.password=${{ secrets.SECURE_DB_PASSWORD }}" >> src/main/resources/mule-app.properties
-        
-      - name: Build and deploy artifact to sandbox
         run: mvn -B deploy -DmuleDeploy -Dmunit.skip=true -s .maven/settings.xml
 #Pass in the secrets we need for deployment as environment variables
-        
         env:
           PLATFORM_USERNAME: ${{ secrets.PLATFORM_USERNAME }}
           PLATFORM_PASSWORD: ${{ secrets.PLATFORM_PASSWORD }}
           SANDBOX_CLIENT_ID: ${{ secrets.SANDBOX_CLIENT_ID }}
           SANDBOX_CLIENT_SECRET: ${{ secrets.SANDBOX_CLIENT_SECRET }}
-     
-          
