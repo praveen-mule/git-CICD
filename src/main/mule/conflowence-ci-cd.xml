@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="conflowence-ci-cdFlow" doc:id="60603685-6d96-4137-89f8-8ba87fb936bd" >
-		<http:listener doc:name="Listener" doc:id="3fbf125b-5e53-4df5-a06b-09a1be214ada" config-ref="HTTP_Listener_config" path="ci-cd"/>
+		<http:listener doc:name="Listener" doc:id="3fbf125b-5e53-4df5-a06b-09a1be214ada" config-ref="HTTP_Listener_config" path="git-ci-cd"/>
 		<ee:transform doc:name="Transform Message" doc:id="4f07892c-3020-43cb-940e-798824ddabaf" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
